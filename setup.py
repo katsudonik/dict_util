@@ -2,7 +2,8 @@ import setuptools
  
 setuptools.setup(
     name="dict_util",
-    version="1.0",
+    version="1.1",
+    license='MIT',
     author="katsudonik",
     author_email="kaikeda.work@gmail.com",
     description="python dict utility package",
