@@ -38,9 +38,9 @@ class DictUtil:
         other_df['key'] = np.nan
         target_df = df[ df['key'].str.contains('.', regex=False) ]
         target_df = self.separate_head(target_df)
-        merge_df = pd.concat([other_df, target_df])
+        merge_df = pd.concat([other_df, target_df]).sort_index()
 
-        head_keys = list(set(merge_df['t_key']))
+        head_keys = list(dict.fromkeys(list(merge_df['t_key'])))
         for k in head_keys:
             r = merge_df[merge_df['t_key'] == k]
             if len( r[ ~(r['key'].isnull()) ] ) > 0:
