@@ -66,5 +66,13 @@ class DictUtil:
             dict_util.dict_to_df(left_dict), 
             dict_util.dict_to_df(right_dict))
 
-
-dict_util = DictUtil()
+    def update_dict_df_val(self, target_dict_df, new_dict_df):
+        merged_df = pd.merge(
+            target_dict_df.sort_index()[['key', 'val']], 
+            new_dict_df.rename(columns={'val': 'new_val'})[['key', 'new_val']], 
+            on='key',
+            how='left')
+        return pd.concat([
+            merged_df[merged_df['new_val'].isnull()][['key', 'val']],
+            merged_df[~(merged_df['new_val'].isnull())][['key', 'new_val']].rename(columns={'new_val': 'val'}) # replace by new value
+        ]).sort_index()
