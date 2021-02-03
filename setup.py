@@ -2,7 +2,7 @@ import setuptools
  
 setuptools.setup(
     name="dict_util",
-    version="1.3",
+    version="1.4",
     license='MIT',
     author="katsudonik",
     author_email="kaikeda.work@gmail.com",

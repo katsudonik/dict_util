@@ -63,8 +63,8 @@ class DictUtil:
     
     def diff_by_df(self, left_dict, right_dict):
         return self.diff_df(
-            dict_util.dict_to_df(left_dict), 
-            dict_util.dict_to_df(right_dict))
+            self.dict_to_df(left_dict), 
+            self.dict_to_df(right_dict))
 
     def update_dict_df_val(self, target_dict_df, new_dict_df):
         merged_df = pd.merge(
