@@ -81,6 +81,24 @@ dict_util.diff_by_df(en_l_dict, en_r_dict)
 # In[8]:
 
 
-replaced_df = dict_util.update_dict_df_val(en_r_df, en_l_df)
-replaced_df
+new_en_r_df = dict_util.update_dict_df_val(en_r_df, en_l_df)
+new_en_r_df
+
+
+# ### df_to_dict
+# convert df ( result of `dict_to_df` or `update_dict_df_val` ) to dict
+
+# In[9]:
+
+
+new_en_r_dict = dict_util.df_to_dict(new_en_r_df)
+new_en_r_dict
+
+
+# In[10]:
+
+
+s = json.dumps(new_en_r_dict, ensure_ascii=False)
+with open(f'sample/new_en_r.json', mode='w') as f:
+    f.write(s)
 
