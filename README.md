@@ -9,4 +9,5 @@ pip install dict_util
 
 ## usage
 
-See: usage.ipynb
+See: [usage.ipynb](https://github.com/katsudonik/dict_util/blob/main/usage.ipynb)
+
