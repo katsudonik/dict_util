@@ -2,13 +2,15 @@ import setuptools
  
 setuptools.setup(
     name="dict_util",
-    version="1.4",
+    version="1.4.1",
     license='MIT',
+    install_requires=['numpy', 'pandas'],
     author="katsudonik",
     author_email="kaikeda.work@gmail.com",
     description="python dict utility package",
     long_description="python dict utility package",
     long_description_content_type="text/markdown",
+    keywords='dict, df, dict to df, df to dict, compare dict',
     url="https://github.com/katsudonik/dict_util",
     packages=setuptools.find_packages(),
     classifiers=[
