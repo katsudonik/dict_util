@@ -1,0 +1,11 @@
+{
+    "message": {
+        "title": "sample title edit!",
+        "subtitle": "sample sub title",
+        "descriptions": {
+            "item_1": "this is description1",
+            "item_2": "this is description2 edit!",
+            "item_3": "this is description3"
+        }
+    }
+}
